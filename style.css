@@ -156,14 +156,17 @@ header a {
     width: 100%;
     height: 100vh; 
     flex-flow: column nowrap;
+    scroll-snap-type: y mandatory;
+   
 }
 
-.main-1>div {
-
+.main-1 > div {
+    
     text-align: center;
     flex:none;
     width: 100%;
     height: 100%;
+
 }
 
 .main-1 div img {
@@ -172,13 +175,13 @@ header a {
     height: 100vh;
     object-fit:cover;
     object-position: center;
-   
+    scroll-snap-align: center;
     
 }
 
 .main-2 {
     position: relative
-   
+    
 }
 
 .head {
@@ -354,5 +357,6 @@ font-weight: 500;
         opacity:1;
     }
 }
+
 
 
