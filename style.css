@@ -73,7 +73,7 @@ header a {
 }
 
 .hover {
-
+    
     background-color: rgba(230, 219, 219, 0.445);
     position: absolute;
     z-index:-1;
@@ -331,6 +331,23 @@ font-weight: 500;
     animation: show 1s;
 }
 
+.main .head span {
+
+    animation: showspan 1s;
+
+}
+
+
+#order {
+
+    animation: order 1s;
+}
+
+#inventory {
+
+    animation: inventory 1s;
+}
+
 @keyframes show {
 
     0% {
@@ -358,5 +375,135 @@ font-weight: 500;
     }
 }
 
+@keyframes showspan {
 
+    0% {
+    
+        transform: translateX(30px);
+        opacity:0;
+    }
+
+    40% {
+        
+        transform: translateX(30px);
+        opacity:0;
+    }
+
+    70% {
+
+        transform: translateX(0px);
+        opacity:1;
+    }
+
+    100% {
+
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
+
+@keyframes order {
+
+    0% {
+
+        transform:translateX(-30px);
+        opacity:0;
+    }
+
+    100% {
+
+        transform:translateX(0px);
+        opacity:1;
+    }
+}
+
+
+@keyframes inventory {
+
+    0% {
+
+        transform:translateX(30px);
+        opacity: 0;
+    }
+
+    100% {
+
+        transform:translateX(0px);
+        opacity:1;
+    }
+}
+
+.hdn-side {
+
+    position:absolute;
+    right:0;
+    width: 310px;
+    transform: translateX(310px);
+    transition:all 0.5s;
+    z-index:100;
+    height:100%;
+    overflow:scroll;
+    background-color: white;
+    
+}
+
+.hdn-content {
+
+    padding: 5px 30px;
+    height: 100%;
+}
+
+.hdn-content li {
+    font-size: 15px;
+    color:#393c41;
+    padding: 10 15px;
+    margin-bottom:30px;
+    cursor:pointer;
+    
+    margin-bottom:25px;
+}
+
+
+#mark {
+
+    display:flex;
+    justify-content: end;
+    padding:30px;
+    background-color: white;
+    position:sticky;
+    z-index:100;
+    right:0;
+    
+}
+
+#mark .fa-xmark {
+    font-size:30px;
+    padding:8px 10px;
+    
+}
+
+.hdn-content ul li:hover {
+    font-weight: 700;
+    
+    
+}
+
+#mark .fa-xmark:hover {
+    background-color: rgb(233,233,233);
+    border-radius: 15%;
+    cursor: pointer;
+    
+}
+
+.blur {
+
+    position:absolute;
+    width: 100%;
+    display:none;
+    height: 100vh;
+    z-index:99;
+    transition:all 1s;
+    backdrop-filter: blur(4px);
+    background-color: #393c416e;
+}
 
