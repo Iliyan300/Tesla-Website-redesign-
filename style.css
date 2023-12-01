@@ -1,7 +1,7 @@
 * {
 
-    padding:0;
-    margin:0;
+    padding:0;  /* вътрешното пространство на елемента */
+    margin:0; /* външното пространство на елемнта */
     text-decoration: none;
     list-style: none;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -45,10 +45,9 @@ header a {
     padding:0 15px;
     text-align: center;
     font-size:15px;
-    font-weight:600;
     color: rgb(34,34,34);
     border-radius:10px;
-    
+    font-weight: 700;
 
 }
 
@@ -62,10 +61,6 @@ header a {
     z-index:5;
 }
 
-.nav-links a {
-    
-    font-weight: 700;
-}
 
 .nav-links a:nth-child(6) {
 
@@ -180,7 +175,7 @@ header a {
 }
 
 .main-2 {
-    position: relative
+    position: relative;
     
 }
 
@@ -256,14 +251,11 @@ header a {
 
     background-color:#393c41d0;
     color:white;
-    font-weight: 500;
 }
 
 #inventory {
-background-color: #eeebebbe;
-color:#393c41;
-font-weight: 500;
-
+    background-color: #eeebebbe;
+    color:#393c41;
 
 }
 
@@ -438,6 +430,7 @@ font-weight: 500;
     position:absolute;
     right:0;
     width: 310px;
+    opacity:0;
     transform: translateX(310px);
     transition:all 0.5s;
     z-index:100;
@@ -451,12 +444,13 @@ font-weight: 500;
 
     padding: 5px 30px;
     height: 100%;
+    padding-bottom:30px;
 }
 
 .hdn-content li {
     font-size: 15px;
     color:#393c41;
-    padding: 10 15px;
+    padding: 10px 15px;
     margin-bottom:30px;
     cursor:pointer;
     
@@ -479,13 +473,12 @@ font-weight: 500;
 #mark .fa-xmark {
     font-size:30px;
     padding:8px 10px;
-    
 }
 
 .hdn-content ul li:hover {
-    font-weight: 700;
-    
-    
+    background-color: rgba(233,233,233);
+    border-radius: 8px;
+    font-weight: 700;    
 }
 
 #mark .fa-xmark:hover {
@@ -507,3 +500,12 @@ font-weight: 500;
     background-color: #393c416e;
 }
 
+.blur.active {
+
+    display:block;
+}
+
+.hdn-side.active {
+     opacity:1;
+    transform: translateX(0px); 
+}

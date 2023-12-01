@@ -1,3 +1,5 @@
+const main = document.querySelector(".main");
+
 const crossBtn = document.getElementById("mark");
 const menuBtn = document.getElementById("menu");
 const sideMenu = document.getElementById("side-menu");
@@ -7,15 +9,15 @@ const blurEffect = document.getElementById("blurring");
 
 function showMenu() {
     
-    sideMenu.style.transform = "translateX(0px)";
-    blurEffect.style.display = "block";
+    sideMenu.classList.add("active");
+    blurEffect.classList.add("active");
 
     }
 
 function hideMenu() {
 
-    sideMenu.style.transform = "translateX(310px)";
-    blurEffect.style.display = "none";
+    sideMenu.classList.remove("active");
+    blurEffect.classList.remove("active");
 }
 
 
